@@ -2,9 +2,12 @@ const diaRegexp = /((^|\n).+?:|#)/g
 const genUrl = "https://www.demirramon.com/gen/undertale_text_box.png?message="
 const output = document.getElementById('imagelist')
 
+let urlList = []
+
 let generateDialogue = (diaString = "") => {
   console.log(diaString)
   document.getElementById("outputstring").value = ""
+  document.getElementById("outputhtml").value = ""
   output.innerHTML = ""
 
   // get starting positions of all dialogs
@@ -20,7 +23,7 @@ let generateDialogue = (diaString = "") => {
     box: "undertale"
   }
   let ruleString = getRuleString(rules)
-  let urlList = []
+  urlList = []
   // Write the dialog
   dialogue.forEach(lineFormat => {
 
@@ -39,6 +42,7 @@ let generateDialogue = (diaString = "") => {
         console.log(url)
         urlList.push(url)
         document.getElementById("outputstring").value += url + "\n"
+        document.getElementById("outputhtml").value += "<img scr=" + url + ">\n"
 
         const img = document.createElement("img")
         img.src = url

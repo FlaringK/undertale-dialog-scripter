@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Undertale Dialogue Maker</title>
+  <title>Undertale Dialogue Scripter</title>
+
+  <script src="/jszip.min.js"></script>
+  <link rel="stylesheet" href="utscript.css">
 </head>
 <body>
+  <h1>undertale-dialog-scripter</h1>
   <br>
   link = www.demirramon.com/utgen.png?message=text
   <br>
-  Input <br>
-  <textarea name="input" id="input" cols="30" rows="10">noelle_default: Hey, everyone!
+  <h2>Input</h2>
+  <textarea name="input" id="input" cols="80" rows="15">noelle_default: Hey, everyone!
 What's up? 
 berdly_laugh: Up is relative. Please restate the question.
 #box=deltarune
 susie_sweat: fuck</textarea> <br>
-  <button id="begin" onclick="generateDialogue(document.getElementById('input').value)">generateDialogue</button>
+  <button id="begin" onclick="generateDialogue(document.getElementById('input').value)">Generate Dialogue</button>
   <br>
   <br>
-  Output: <br>
+  <h2>Output</h2>
   <textarea name="outputstring" id="outputstring" cols="80" rows="15"></textarea>
+  <textarea name="outputhtml" id="outputhtml" cols="80" rows="15"></textarea>
   <div id="imagelist"></div>
 
   <script src="utdiemake.js"></script>
