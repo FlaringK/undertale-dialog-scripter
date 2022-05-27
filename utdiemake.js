@@ -20,7 +20,7 @@ let generateDialogue = (diaString = "") => {
   console.log(dialogue)
 
   let rules = {
-    box: "undertale"
+    box: "undertale",
   }
   let ruleString = getRuleString(rules)
   urlList = []
@@ -34,7 +34,7 @@ let generateDialogue = (diaString = "") => {
         ruleString = getRuleString(rules)
         break
       default:
-        const [face, line] = lineFormat.split(/:/)
+        const [face, line] = lineFormat.split(/: /)
         const [charater, expression] = face.split(/_/)
         const message = `character=${charater} expression=${expression} ${encodeURIComponent(line.trim())}`
         const url = genUrl + ruleString + message
@@ -56,6 +56,6 @@ let generateDialogue = (diaString = "") => {
 
 let getRuleString = ruleObject => {
   let output = ""
-  for (const [key, value] of Object.entries(ruleObject)) { output += `${key}=${value} ` }
+  for (const [key, value] of Object.entries(ruleObject)) { output += `${key}=${encodeURIComponent(value)} ` }
   return output
 }

@@ -11,7 +11,7 @@
 <body>
   <h1>undertale-dialog-scripter</h1>
   <br>
-  link = www.demirramon.com/utgen.png?message=text
+  made using <a href="https://www.demirramon.com/help/undertale_text_box_generator_dev">Demirramon's Text Box Generator API (but not an API)</a>
   <br>
   <h2>Input</h2>
   <textarea name="input" id="input" cols="80" rows="15">noelle_default: Hey, everyone!
@@ -23,8 +23,17 @@ susie_sweat: fuck</textarea> <br>
   <br>
   <br>
   <h2>Output</h2>
-  <textarea name="outputstring" id="outputstring" cols="80" rows="15"></textarea>
-  <textarea name="outputhtml" id="outputhtml" cols="80" rows="15"></textarea>
+  <div style="display: flex; justify-content: space-around;">
+    <div>
+      <h3>URLs</h3>
+      <textarea name="outputstring" id="outputstring" cols="80" rows="15"></textarea>
+    </div>
+    <div>
+      <h3>HTML</h3>
+      <textarea name="outputhtml" id="outputhtml" cols="80" rows="15"></textarea>
+    </div>
+  </div>
+  
   <div id="imagelist"></div>
 
   <script src="utdiemake.js"></script>

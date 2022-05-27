@@ -1,4 +1,18 @@
+@font-face {
+  font-family: 'UTDetermination';
+  src: url('https://file.garden/X1htvgJ0DEp_tp-Z/MSPFA%20undertale/Fonts/undertale-determination-overworld.ttf');
+}
+
 body {
   background-color: black;
   color: white;
+  text-align: center;
+  font-family: 'UTDetermination';
+}
+
+a {color: orange}
+a:hover {color: yellow}
+
+#imagelist img {
+  margin: 0.5em;
 }
