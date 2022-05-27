@@ -1,10 +1,11 @@
 const diaRegexp = /((^|\n).+?:|#)/g
 const genUrl = "https://www.demirramon.com/gen/undertale_text_box.png?message="
-const output = document.getElementById('outputimg')
+const output = document.getElementById('imagelist')
 
 let generateDialogue = (diaString = "") => {
   console.log(diaString)
   document.getElementById("outputstring").value = ""
+  output.innerHTML = ""
 
   // get starting positions of all dialogs
   let matches = [...diaString.matchAll(diaRegexp)];
@@ -33,11 +34,15 @@ let generateDialogue = (diaString = "") => {
         const [face, line] = lineFormat.split(/:/)
         const [charater, expression] = face.split(/_/)
         const message = `character=${charater} expression=${expression} ${encodeURIComponent(line.trim())}`
+        const url = genUrl + ruleString + message
 
-        console.log(message)
-        output.src = genUrl + ruleString + message
-        urlList.push(genUrl + ruleString + message)
-        document.getElementById("outputstring").value += genUrl + ruleString + message + "\n" 
+        console.log(url)
+        urlList.push(url)
+        document.getElementById("outputstring").value += url + "\n"
+
+        const img = document.createElement("img")
+        img.src = url
+        output.appendChild(img)
         break
     }
     
