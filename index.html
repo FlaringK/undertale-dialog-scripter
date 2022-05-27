@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Undertale Dialogue Maker</title>
+</head>
+<body>
+  <img id=outputimg src="https://www.demirramon.com/gen/undertale_text_box.png?message=text" alt="">
+  <br>
+  link = www.demirramon.com/utgen.png?message=text
+  <br>
+  Input <br>
+  <textarea name="input" id="input" cols="30" rows="10">noelle_default: Hey, everyone!
+What's up? 
+berdly_laugh: Up is relative. Please restate the question.
+#box=deltarune
+susie_sweat: fuck</textarea> <br>
+  <button id="begin" onclick="generateDialogue(document.getElementById('input').value)">generateDialogue</button>
+  <br>
+  <br>
+  Output: <br>
+  <textarea name="outputstring" id="outputstring" cols="80" rows="25"></textarea>
+
+  <script src="utdiemake.js"></script>
+</body>
+</html>
