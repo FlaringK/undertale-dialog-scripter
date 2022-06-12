@@ -36,7 +36,8 @@ let generateDialogue = (diaString = "") => {
       default:
         const [face, line] = lineFormat.split(/: /)
         const [charater, expression] = face.split(/_/)
-        const message = `character=${charater} expression=${expression} ${encodeURIComponent(line.trim())}`
+        const message = charater == "n" ?
+          `character=${charater} expression=${expression} ${encodeURIComponent(line.trim())}` : `${encodeURIComponent(line.trim())}`
         const url = genUrl + ruleString + message
 
         console.log(url)

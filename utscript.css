@@ -2,6 +2,10 @@
   font-family: 'UTDetermination';
   src: url('https://file.garden/X1htvgJ0DEp_tp-Z/MSPFA%20undertale/Fonts/undertale-determination-overworld.ttf');
 }
+@font-face {
+  font-family: 'UTMercy';
+  src: url('https://file.garden/X1htvgJ0DEp_tp-Z/MSPFA%20undertale/Fonts/mercy.ttf');
+}
 
 body {
   background-color: black;
@@ -15,4 +19,18 @@ a:hover {color: yellow}
 
 #imagelist img {
   margin: 0.5em;
+}
+
+button {
+  font-family: 'UTMercy';
+  font-size: large;
+
+  background: none;
+  border: 3px orange solid;
+  color: orange;
+  padding: 3px 10px 5px;
+}
+button:hover {
+  border: 3px yellow solid;
+  color: yellow;
 }
